@@ -1,0 +1,16 @@
+[package]
+name = "inspect-tls-cert"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.11", features = ["rustls-tls", "json"] }
+rustls = "0.20"
+tokio-rustls = "0.23"
+webpki = "0.22"
+webpki-roots = "0.22"
+time = "0.3" # For handling dates in the certificate
+x509-parser = "0.15.1"
